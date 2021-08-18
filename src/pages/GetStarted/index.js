@@ -2,6 +2,7 @@ import React from 'react';
 import { ImageBackground, StyleSheet, Text, View } from 'react-native';
 import { IlGetStarted, IlLogo } from '../../assets';
 import { Button, Gap } from '../../components';
+import {Font, Colors} from '../../utils';
 
 const GetStarted = ({navigation}) => {
     return (
@@ -9,7 +10,7 @@ const GetStarted = ({navigation}) => {
         <View>
           <IlLogo />
           <Text style={styles.title}>
-            Konsultasi dengan dokter jadi lebih mudah & fleksibel
+            Konsultasi kesehatan anda dengan dokter pilihanmu sekarang
           </Text>
         </View>
         <View>
@@ -33,15 +34,16 @@ export default GetStarted;
 const styles = StyleSheet.create({
   getStarted: {
     padding: 40,
-    backgroundColor: '#b0b0b0',
+    backgroundColor: Colors.white,
     flex: 1,
     justifyContent: 'space-between',
   },
   title: {
-    fontSize: 28,
+    fontSize: 24,
     marginTop: 91,
-    paddingRight: 85,
-    color: '#FFFFFF',
-    fontFamily: 'Nunito-SemiBold',
+    color: Colors.text.white,
+    fontFamily: Font.primary[600],
+    maxWidth: 320,
+    lineHeight: 45,
   },
 });
